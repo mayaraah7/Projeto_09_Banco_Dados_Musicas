@@ -46,15 +46,35 @@ LIMIT 10;
 
 
 -- 7. Quero saber quais os albuns do Michael Jackson estão na lista e quais os anos de lançamento dos albuns
+SELECT titulo, artista, ano_lancamento, album
+FROM musicas 
+WHERE artista = "Michael Jackson"
+
+
+
 
 -- 8. Quero ver somente as musicas de Rock da playlist
+SELECT titulo, genero
+FROM musicas
+WHERE genero = "Rock"
+
 
 -- 9. quero ver somente as musicas lançadas nos anos 90
+SELECT titulo, ano_lancamento
+FROM musicas
+WHERE ano_lancamento = 1990
 
 -- 10. quero ver musicas lançadas apartir dos anos 2000
+SELECT titulo, ano_lancamento
+FROM musicas
+WHERE ano_lancamento >=2000 
+ORDER by ano_lancamento ASC
 
 -- 11. Adicione as informações a respeito da sua musica favorita.
-
+INSERT INTO musicas (titulo, artista, album, genero, duracao_segundos, ano_lancamento, streaming_count) VALUES
+('ON', 'BTS', 'Map of the Soul: 7', 'K-pop', 355, 2020, 65500000000),
+('FAKE LOVE', 'BTS', 'Love Yourself: Tear', 'K-pop', 318, 2018, 1003000000),
+('Whiplash', 'Aespa', 'Whiplash', 'K-pop', 183, 2024,  22900000000)
 -- 12 .Adicione qualquer música de Funk que o professor odeia
 
 -- 13. remova essa música que você acabou de adicionar.
